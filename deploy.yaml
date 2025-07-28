@@ -23,15 +23,11 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-service
-  namespace: argocd
 spec:
   selector:
     app: nginx
-  type: NodePort  
   ports:
-    - name: “my-tomcat”
+    - name: my-tomcat  # ✅ valid name: lowercase, alphanumeric, hyphen
       port: 80
       targetPort: 8080
-      nodePort: 30080
-
 
