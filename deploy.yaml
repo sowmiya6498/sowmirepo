@@ -29,5 +29,6 @@ spec:
   ports:
     - name: my-tomcat  # ✅ valid name: lowercase, alphanumeric, hyphen
       port: 80
-      targetPort: 8080
+      targetPort: 80
+      # nodeport: 30008
 
